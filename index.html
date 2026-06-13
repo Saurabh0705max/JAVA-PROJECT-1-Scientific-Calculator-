@@ -277,29 +277,35 @@ class ScientificCalculator extends BasicCalculator{
     }
 
     sin(){
-        this.display.value =
-        Math.sin(Number(this.display.value));
-    }
-
+    let num = Number(this.display.value);
+    this.display.value =
+        Math.sin(num * Math.PI / 180).toFixed(6);
+}
     cos(){
-        this.display.value =
-        Math.cos(Number(this.display.value));
-    }
-
+    let num = Number(this.display.value);
+    this.display.value = 
+        Math.cos(num * Math.PI / 180).toFixed(6);
+}
     tan(){
-        this.display.value =
-        Math.tan(Number(this.display.value));
-    }
-
+    let num = Number(this.display.value);
+    this.display.value = 
+        Math.tan(num * Math.PI / 180).toFixed(6)
+    ;
+}
     log(){
-        this.display.value =
-        Math.log10(Number(this.display.value));
-    }
+    let num = Number(this.display.value);
+    this.display.value = 
+        Math.log10(num).toFixed(6)
+    ;
+}
+
 
     ln(){
-        this.display.value =
-        Math.log(Number(this.display.value));
-    }
+    let num = Number(this.display.value);
+    this.display.value =
+        Math.log(num).toFixed(6)
+    ;
+}
 
     pi(){
         this.display.value += Math.PI;
@@ -340,4 +346,3 @@ document.addEventListener("keydown",(e)=>{
 
 </body>
 </html>
-
