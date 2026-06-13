@@ -278,7 +278,8 @@ cube(){
         (Number(this.display.value) ** 3).toFixed(6)
     );
 }
- sin(){
+
+sin(){
     let num = Number(this.display.value);
     this.display.value = Number(
         Math.sin(num * Math.PI / 180).toFixed(6)
@@ -314,9 +315,10 @@ ln(){
 }
 
 pi(){
-    this.display.value = Math.PI;
+    this.display.value = Number(
+        Math.PI.toFixed(6)
+    );
 }
-
 /* Object */
 
 const calc =
