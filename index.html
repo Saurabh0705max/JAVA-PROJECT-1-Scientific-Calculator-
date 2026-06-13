@@ -276,10 +276,10 @@ class ScientificCalculator extends BasicCalculator{
         Math.pow(Number(this.display.value),3);
     }
 
-    sin(){
-        this.display.value =
-        Math.sin(Number(this.display.value));
-    }
+   sin(){
+    let num = Number(this.display.value);
+    this.display.value = Math.sin(num * Math.PI / 180);
+}
 
     cos(){
         this.display.value =
