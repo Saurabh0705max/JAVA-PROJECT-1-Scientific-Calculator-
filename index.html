@@ -262,50 +262,59 @@ class ScientificCalculator extends BasicCalculator{
     }
 
     sqrt(){
-        this.display.value =
-        Math.sqrt(Number(this.display.value));
-    }
-
-    square(){
-        this.display.value =
-        Math.pow(Number(this.display.value),2);
-    }
-
-    cube(){
-        this.display.value =
-        Math.pow(Number(this.display.value),3);
-    }
-
-  sin(){
-    let num = Number(this.display.value);
-    this.display.value =
-        Math.sin(num * Math.PI / 180).toFixed(6);
+    this.display.value = Number(
+        Math.sqrt(Number(this.display.value)).toFixed(6)
+    );
 }
 
+square(){
+    this.display.value = Number(
+        (Number(this.display.value) ** 2).toFixed(6)
+    );
+}
 
-    cos(){
-        this.display.value =
-        Math.cos(Number(this.display.value));
-    }
+cube(){
+    this.display.value = Number(
+        (Number(this.display.value) ** 3).toFixed(6)
+    );
+}
+ sin(){
+    let num = Number(this.display.value);
+    this.display.value = Number(
+        Math.sin(num * Math.PI / 180).toFixed(6)
+    );
+}
 
-    tan(){
-        this.display.value =
-        Math.tan(Number(this.display.value));
-    }
+cos(){
+    let num = Number(this.display.value);
+    this.display.value = Number(
+        Math.cos(num * Math.PI / 180).toFixed(6)
+    );
+}
 
-    log(){
-        this.display.value =
-        Math.log10(Number(this.display.value));
-    }
+tan(){
+    let num = Number(this.display.value);
+    this.display.value = Number(
+        Math.tan(num * Math.PI / 180).toFixed(6)
+    );
+}
 
-    ln(){
-        this.display.value =
-        Math.log(Number(this.display.value));
-    }
+log(){
+    let num = Number(this.display.value);
+    this.display.value = Number(
+        Math.log10(num).toFixed(6)
+    );
+}
 
-    pi(){
-        this.display.value += Math.PI;
-    }
+ln(){
+    let num = Number(this.display.value);
+    this.display.value = Number(
+        Math.log(num).toFixed(6)
+    );
+}
+
+pi(){
+    this.display.value = Math.PI;
 }
 
 /* Object */
